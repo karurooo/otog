@@ -6,7 +6,7 @@ export const downloadsFixture: ApiResponse<DownloadFile[]> = {
   data: [
     {
       id: 1,
-      name: 'Program Regisration Form',
+      name: 'Program Registration Form',
       file_type: 'TXT',
       size_kb: 1,
       updated_at: '2026-11-16',
@@ -14,11 +14,11 @@ export const downloadsFixture: ApiResponse<DownloadFile[]> = {
     },
     {
       id: 2,
-      name: 'Facilty Reservation Request',
-      file_type: 'PDF',
-      size_kb: 0,
+      name: 'Facility Reservation Request',
+      file_type: 'TXT',
+      size_kb: 1,
       updated_at: '2026-11-16',
-      url: '/files/missing-file.pdf',
+      url: '/files/sample-form.txt',
     },
   ],
   message: 'OK',
@@ -34,7 +34,7 @@ export const faqsFixture: ApiResponse<Faq[]> = {
     },
     {
       id: 2,
-      question: 'How do I reserve a city facilty?',
+      question: 'How do I reserve a city facility?',
       answer: ['Submit a facility request via the Contact form at least 7 days in advance.'],
     },
     {
@@ -45,7 +45,7 @@ export const faqsFixture: ApiResponse<Faq[]> = {
     {
       id: 4,
       question: 'Who can I contact for assistance?',
-      answer: ['Answer pending'],
+      answer: ['Visit the Contact section below or call the City Sports Office during office hours.'],
     },
   ],
   message: 'OK',
