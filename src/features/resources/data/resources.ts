@@ -20,6 +20,14 @@ export const downloadsFixture: ApiResponse<DownloadFile[]> = {
       updated_at: '2026-11-16',
       url: '/files/sample-form.txt',
     },
+    {
+      id: 3,
+      name: 'Parent Consent & Medical Waiver (Minors)',
+      file_type: 'TXT',
+      size_kb: 1,
+      updated_at: '2026-11-16',
+      url: '/files/sample-form.txt',
+    },
   ],
   message: 'OK',
   errors: null,
@@ -30,22 +38,31 @@ export const faqsFixture: ApiResponse<Faq[]> = {
     {
       id: 1,
       question: 'How do I join a sports program?',
-      answer: ['Download the registration form and submit it at the City Sports Office.'],
+      answer: [
+        'Download the Program Registration Form above, attach your barangay clearance, and submit it at the City Sports Office.',
+        'Participants under 18 must also submit a signed Parent Consent & Medical Waiver.',
+      ],
     },
     {
       id: 2,
       question: 'How do I reserve a city facility?',
-      answer: ['Submit a facility request via the Contact form at least 7 days in advance.'],
+      answer: [
+        'Download the Facility Reservation Request form or send an inquiry through the Contact section at least 7 working days before your event.',
+      ],
     },
     {
       id: 3,
       question: 'Are city sports programs free?',
-      answer: ['Most grassroots and community programs are free for Butuan City residents.'],
+      answer: [
+        'Yes. Grassroots, community fitness, and inclusive programs are free for Butuan City residents. Competitive squads require tryout qualification.',
+      ],
     },
     {
       id: 4,
       question: 'Who can I contact for assistance?',
-      answer: ['Visit the Contact section below or call the City Sports Office during office hours.'],
+      answer: [
+        'You may reach the Butuan City Sports Department via the phone number, official email, or inquiry form in the Contact section below (Mon–Fri, 8:00 AM – 5:00 PM).',
+      ],
     },
   ],
   message: 'OK',
