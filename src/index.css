@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #0b3b8c;
+  --color-gov-bar: #0a1f44;
+  --color-accent: #e8a317;
+  --color-success: #14804a;
+  --color-danger: #c62828;
+  --color-band: #f3f6fb;
+  --font-sans: 'Public Sans', system-ui, sans-serif;
+  --font-display: 'Barlow Condensed', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

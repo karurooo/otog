@@ -1,0 +1,7 @@
+# Enforce Conventional Commits: type(scope): subject
+if ! head -1 "$1" | grep -qE '^(feat|fix|style|refactor|chore|docs|test)(\([a-z0-9-]+\))?: .+'; then
+  echo "Commit message must follow: <type>(<scope>): <subject>"
+  echo "  types: feat fix style refactor chore docs test"
+  echo "  e.g.   feat(about): add initial department mandate"
+  exit 1
+fi
