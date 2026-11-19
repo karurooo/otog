@@ -5,10 +5,10 @@ This training playbook turns the **Butuan City Sports Department (`sports-depart
 > [!IMPORTANT]
 > **Built-in Repository Guardrails Already Active**
 > Participants will experience real production gates enforced by this repo:
-> - **Branch baseline:** Work branches off [`development`](/src/app/routes/home/HomePage.tsx) and merges back via Pull Request; `main` is reserved for releases.
+> - **Branch baseline:** Work branches off `feat/bcsd-portal-scaffold` and merges back via Pull Request; `main` is reserved for the final release PR.
 > - **Commit message hook ([commit-msg](/.husky/commit-msg)):** Enforces Conventional Commits (`feat|fix|style|refactor|chore|docs|test(scope): subject`).
 > - **Pre-commit hook ([pre-commit](/.husky/pre-commit)):** Runs `npm run lint` before every commit.
-> - **GitHub Actions CI ([ci.yml](/.github/workflows/ci.yml)):** Runs `lint`, `type-check`, `test`, `build`, and `check:bundle` (≤ 200 KB gzipped) on every PR to `development`, `staging`, or `main`.
+> - **GitHub Actions CI ([ci.yml](/.github/workflows/ci.yml)):** Runs `lint`, `type-check`, `test`, `build`, and `check:bundle` (≤ 200 KB gzipped) on every PR to `feat/bcsd-portal-scaffold`, `development`, `staging`, or `main`.
 
 ---
 
@@ -18,16 +18,16 @@ The 12 sections are evenly distributed (**3 sections per person**) in logical do
 
 | Personnel | Role Focus | Assigned Sections | Primary Repo Files | Primary Reviewer |
 | :--- | :--- | :--- | :--- | :--- |
-| **Personnel 1 (Dev A)** | Shell, Entry & Identity | **1. Navigation Link**<br>**2. Home**<br>**3. About** | [navigation.ts](/src/config/navigation.ts), [SiteHeader.tsx](/src/components/layout/AppShell/SiteHeader.tsx), [DesktopNav.tsx](/src/components/layout/AppShell/DesktopNav.tsx), [MobileNav.tsx](/src/components/layout/AppShell/MobileNav.tsx), [HeroSection.tsx](/src/features/hero/components/organisms/HeroSection.tsx), [siteStats.ts](/src/features/hero/data/siteStats.ts), [AboutSection.tsx](/src/features/about/components/organisms/AboutSection.tsx), [about.ts](/src/features/about/data/about.ts) | **Personnel 2 (Dev B)** |
-| **Personnel 2 (Dev B)** | Core Operations | **4. Programs**<br>**5. Events**<br>**6. Facilities** | [ProgramsSection.tsx](/src/features/programs/components/organisms/ProgramsSection.tsx), [programs.ts](/src/features/programs/data/programs.ts), [EventsSection.tsx](/src/features/events/components/organisms/EventsSection.tsx), [events.ts](/src/features/events/data/events.ts), [FacilitiesSection.tsx](/src/features/facilities/components/organisms/FacilitiesSection.tsx), [facilities.ts](/src/features/facilities/data/facilities.ts) | **Personnel 3 (Dev C)** |
-| **Personnel 3 (Dev C)** | Community & Media | **7. Athletes**<br>**8. News**<br>**9. Gallery** | [AthletesSection.tsx](/src/features/athletes/components/organisms/AthletesSection.tsx), [athletes.ts](/src/features/athletes/data/athletes.ts), [NewsSection.tsx](/src/features/news/components/organisms/NewsSection.tsx), [news.ts](/src/features/news/data/news.ts), [GallerySection.tsx](/src/features/gallery/components/organisms/GallerySection.tsx), [gallery.ts](/src/features/gallery/data/gallery.ts) | **Personnel 4 (Dev D)** |
-| **Personnel 4 (Dev D)** | Citizen Services & Chrome | **10. Resources**<br>**11. Contact**<br>**12. Footer** | [ResourcesSection.tsx](/src/features/resources/components/organisms/ResourcesSection.tsx), [resources.ts](/src/features/resources/data/resources.ts), [ContactSection.tsx](/src/features/contact/components/organisms/ContactSection.tsx), [inquirySchema.ts](/src/features/contact/constants/inquirySchema.ts), [SiteFooter.tsx](/src/components/layout/AppShell/SiteFooter.tsx), [site.ts](/src/config/site.ts) | **Personnel 1 (Dev A)** |
+| **Personnel 1 (Dev A) — Carlo (owner)** | Shell, Entry & Identity | **1. Navigation Link**<br>**2. Home**<br>**3. About** | [navigation.ts](/src/config/navigation.ts), [SiteHeader.tsx](/src/components/layout/AppShell/SiteHeader.tsx), [DesktopNav.tsx](/src/components/layout/AppShell/DesktopNav.tsx), [MobileNav.tsx](/src/components/layout/AppShell/MobileNav.tsx), [HeroSection.tsx](/src/features/hero/components/organisms/HeroSection.tsx), [siteStats.ts](/src/features/hero/data/siteStats.ts), [AboutSection.tsx](/src/features/about/components/organisms/AboutSection.tsx), [about.ts](/src/features/about/data/about.ts) | **Personnel 2 (Dev B)** |
+| **Personnel 2 (Dev B) — Patrick** | Core Operations | **4. Programs**<br>**5. Events**<br>**6. Facilities** | [ProgramsSection.tsx](/src/features/programs/components/organisms/ProgramsSection.tsx), [programs.ts](/src/features/programs/data/programs.ts), [EventsSection.tsx](/src/features/events/components/organisms/EventsSection.tsx), [events.ts](/src/features/events/data/events.ts), [FacilitiesSection.tsx](/src/features/facilities/components/organisms/FacilitiesSection.tsx), [facilities.ts](/src/features/facilities/data/facilities.ts) | **Personnel 3 (Dev C)** |
+| **Personnel 3 (Dev C) — Cliff** | Community & Media | **7. Athletes**<br>**8. News**<br>**9. Gallery** | [AthletesSection.tsx](/src/features/athletes/components/organisms/AthletesSection.tsx), [athletes.ts](/src/features/athletes/data/athletes.ts), [NewsSection.tsx](/src/features/news/components/organisms/NewsSection.tsx), [news.ts](/src/features/news/data/news.ts), [GallerySection.tsx](/src/features/gallery/components/organisms/GallerySection.tsx), [gallery.ts](/src/features/gallery/data/gallery.ts) | **Personnel 4 (Dev D)** |
+| **Personnel 4 (Dev D) — Ramil** | Citizen Services & Chrome | **10. Resources**<br>**11. Contact**<br>**12. Footer** | [ResourcesSection.tsx](/src/features/resources/components/organisms/ResourcesSection.tsx), [resources.ts](/src/features/resources/data/resources.ts), [ContactSection.tsx](/src/features/contact/components/organisms/ContactSection.tsx), [inquirySchema.ts](/src/features/contact/constants/inquirySchema.ts), [SiteFooter.tsx](/src/components/layout/AppShell/SiteFooter.tsx), [site.ts](/src/config/site.ts) | **Personnel 1 (Dev A)** |
 
 > [!TIP]
 > **Cross-Team Shared Files (Intentional Collaboration Points)**
 > - [site.ts](/src/config/site.ts) is touched by **Dev A** (Header/Brand info) and **Dev D** (Contact info & Footer links).
 > - [HomePage.tsx](/src/app/routes/home/HomePage.tsx) and [navigation.ts](/src/config/navigation.ts) coordinate all 4 developers' sections.
-> - Rotate reviewers each sprint (`A→B→C→D→A` in Sprint 1, `A→C`, `B→D` in Sprint 2, etc.) so every person reviews unfamiliar domains.
+> - Reviewers are fixed: Carlo's PRs are reviewed by Patrick, Patrick's by Cliff, Cliff's by Ramil, Ramil's by Carlo (`A←B←C←D←A`), so everyone reviews an unfamiliar domain.
 
 ---
 
@@ -49,7 +49,7 @@ flowchart LR
 | **Stage 1: Initial Creation** | Dev picks up an assigned GitHub Issue and delivers the initial structure/baseline for the section. | `git checkout -b feat/<section>-init` from `development`, atomic Conventional Commits, opening a **Draft PR**, marking **Ready for Review**, linking Issues (`Refs #ID`), passing CI. |
 | **Stage 2: Incomplete Details** | Dev submits a partial implementation with intentionally missing/placeholder details (missing fields, unverified stats, incomplete lists, or missing edge-case UI). Reviewer catches the gaps. | **Code Review** (`Request Changes`, inline comments, **GitHub Suggested Changes**), pushing follow-up commits to an open PR, or merging an agreed MVP while filing a tracked follow-up GitHub Issue (`stage:2-incomplete`). |
 | **Stage 3: Enhancement or Correction** | Stakeholders/QA report typos, wrong data, UI/UX tweaks, or outdated demo entries (plus concurrent edits on shared files). | Creating `fix/<section>-*` / `refactor/<section>-*` branches, syncing with `git fetch origin && git rebase origin/development` (or merge), **resolving merge conflicts**, attaching before/after screenshots in PR descriptions, `git revert` drill. |
-| **Stage 4: Completion of Section** | Final sign-off: replacing all `TODO`/`Sample` placeholders, updating unit tests (`vitest`), checking accessibility & bundle budget, closing all open issues. | Automated issue closing (`Closes #ID`), Squash & Merge, deleting merged branches, final **Release PR (`development` → `main`)** with GitHub Release notes & tag `v1.0.0`. |
+| **Stage 4: Completion of Section** | Final sign-off: replacing all `TODO`/`Sample` placeholders, updating unit tests (`vitest`), checking accessibility & bundle budget, closing all open issues. | Automated issue closing (`Closes #ID`), Squash & Merge, deleting merged branches, final **Release PR (`feat/bcsd-portal-scaffold` → `main`)** with GitHub Release notes & tag `v1.0.0`. |
 
 ---
 
@@ -212,26 +212,25 @@ To make the training genuinely mirror day-to-day engineering, inject these 5 rea
    Have each dev intentionally try `git commit -m "updated stuff"` once to observe `.husky/commit-msg` reject it, then commit properly with `feat(about): add initial department mandate`.
 2. **Draft PR → Request Changes → Suggested Changes (Sprint 2):**
    Every reviewer must submit at least **1 inline comment**, **1 GitHub Suggested Change block**, and **1 `Request Changes`** review. Authors must commit the suggestion from the GitHub UI, pull locally (`git pull`), push an additional fix commit, and click **Re-request review**.
-3. **Controlled Merge Conflict Resolution (Sprint 3):**
-   - **Pair 1 (Dev A + Dev D):** Both branch from `development` at the same time and modify `SITE` in [site.ts](/src/config/site.ts). Dev A merges first; Dev D must pull/rebase `origin/development`, resolve the conflict locally without losing Dev A's changes, run `npm test`, and push.
-   - **Pair 2 (Dev B + Dev C):** Both edit a shared section comment/order or metadata in [HomePage.tsx](/src/app/routes/home/HomePage.tsx) (or [navigation.ts](/src/config/navigation.ts)). Dev B merges first; Dev C resolves the conflict.
+3. **Controlled Merge Conflict Resolution (once, after Wave 3):** Waves 1-3 are conflict-free by design (disjoint files). This single drill adds one planned conflict.
+   - **Carlo (Dev A) + Ramil (Dev D):** Both branch from `feat/bcsd-portal-scaffold` at the same commit and modify `SITE` in [site.ts](/src/config/site.ts). Carlo merges first; Ramil must pull/rebase `origin/feat/bcsd-portal-scaffold`, resolve the conflict locally without losing Carlo's changes, run `npm test`, and push.
 4. **CI Failure Triage (Sprint 3):**
    One dev pushes an unused variable or TypeScript type mismatch so [ci.yml](/.github/workflows/ci.yml) fails on the PR. Practice reading GitHub Actions logs, fixing locally, and confirming green checks before merge.
 5. **Release PR & Tagging (End of Sprint 4):**
-   Once all 12 sections are complete on `development`, designate a Release Captain to open a **Release PR (`development` → `main`)** with auto-generated release notes, get sign-off from all 4 personnel, merge, and create GitHub Release **`v1.0.0`**.
+   Once all 12 sections are complete on `feat/bcsd-portal-scaffold`, Carlo (owner) opens the **Release PR (`feat/bcsd-portal-scaffold` → `main`)** with auto-generated release notes, gets sign-off from Patrick, Cliff and Ramil, merges, and creates GitHub Release **`v1.0.0`**.
 
 ---
 
 ## 6. Facilitator Pre-Training Setup Checklist
 
 Before kicking off the workshop on GitHub:
-- [ ] **Branch Protection on `main` and `development`:**
+- [ ] **Branch Protection on `main`, `development` and `feat/bcsd-portal-scaffold`:**
   - Require Pull Request before merging (no direct pushes).
   - Require at least **1 approving review** (dismiss stale approvals on new pushes).
   - Require status checks to pass (`frontend` job from [ci.yml](/.github/workflows/ci.yml)).
   - Enable "Automatically delete head branches" after merge.
 - [ ] **Create GitHub Labels & 4 Milestones** (Sprint 1–4) listed in Section 3.
 - [ ] **Add a PR Template** at `.github/PULL_REQUEST_TEMPLATE.md` and Issue Templates at `.github/ISSUE_TEMPLATE/` so every participant gets structured forms automatically.
-- [ ] **Decide Starting State of `development`:**
+- [x] **Starting state decided: scaffold branch `feat/bcsd-portal-scaffold`** (11 data/config files empty, see the playbook section 1), so Stage 1 builds each section's content from scratch. The two options below are superseded:
   - *Option A (Fastest — Content & Refinement Track):* Keep the current scaffolded components in `development` (which already have `PLACEHOLDER CONTENT` & `TODO(T-23)` markers) and have participants treat Stage 1 as replacing scaffold placeholders with initial real content/features.
   - *Option B (From-Scratch Component Track):* Create a training reset branch where the 12 sections start as stubs/placeholders using [SectionPlaceholder.tsx](/src/components/common/SectionPlaceholder.tsx) so Stage 1 truly builds each section from scratch.
