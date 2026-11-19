@@ -1,4 +1,3 @@
-// File: /src/config/site.ts
 export const SITE = {
   name: 'Butuan City Sports Department',
   shortName: 'BCSD',
