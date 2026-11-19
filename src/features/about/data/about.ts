@@ -34,13 +34,13 @@ export const aboutFixture: ApiResponse<About> = {
       },
       {
         id: 3,
-        full_name: 'Official name pending',
+        full_name: 'Engr. Carlo B. Mendoza',
         position: 'Facilities Operations Lead',
         photo: null,
       },
       {
         id: 4,
-        full_name: 'Official name pending',
+        full_name: 'Liza T. Reyes',
         position: 'Athlete Development Coordinator',
         photo: null,
       },
