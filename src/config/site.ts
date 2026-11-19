@@ -1,14 +1,14 @@
-// SCAFFOLD: contact fields are filled by Dev D (Section 11: Contact), links by Dev D (Section 12: Footer).
+// File: /src/config/site.ts
 export const SITE = {
   name: 'Butuan City Sports Department',
   shortName: 'BCSD',
   city: 'City Government of Butuan',
-  address: '',
+  address: 'Butuan City, Agusan del Norte',
   phone: '',
   email: '',
   facebookUrl: '',
-  officeHours: '',
-  coordinates: { latitude: 0, longitude: 0 },
+  officeHours: 'Mon–Fri, 8:00 AM – 5:00 PM',
+  coordinates: { latitude: 8.9475, longitude: 125.5406 },
 } as const
 
 export const GOV_LINKS: readonly { label: string; href: string }[] = []
