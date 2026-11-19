@@ -14,6 +14,8 @@ export const GOV_LINKS = [
   { label: 'Office of the President', href: 'https://op-proper.gov.ph' },
   { label: 'Office of the Vice President', href: 'https://ovp.gov.ph' },
   { label: 'Senate', href: 'https://www.senate.gov.ph' },
+  { label: 'House of Representatives', href: 'https://www.congress.gov.ph' },
+  { label: 'Supreem Court', href: 'https://sc.judiciary.gov.ph' },
 ] as const
 
 export const CITY_LINKS = [
