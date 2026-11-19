@@ -27,10 +27,10 @@ const e = (
 export const eventsFixture: SportEvent[] = [
   e(1, 'Butuan City Swim Meet', 'Swimming', '2026-10-10', '2026-10-11', 'completed'),
   e(2, 'Balangay Fun Run', 'Athletics', '2026-11-08', '2026-11-08', 'completed'),
-  e(3, 'Inter-Barangay Basketball Leage', 'Basketball', '2026-11-10', '2026-11-30', 'ongoing'),
-  e(4, 'City Volleybal Clinic', 'Volleyball', '2026-11-22', '2026-11-22'),
+  e(3, 'Inter-Barangay Basketball League', 'Basketball', '2026-11-10', '2026-11-30', 'ongoing'),
+  e(4, 'City Volleyball Clinic', 'Volleyball', '2026-11-22', '2026-11-22'),
   e(5, 'Butuan Chess Open', 'Chess', '2026-12-05', '2026-12-06', 'postponed'),
-  e(6, 'Youth Footbal Cup', 'Football', '2026-12-14', '2026-12-12'),
+  e(6, 'Youth Football Cup', 'Football', '2026-12-12', '2026-12-14'),
   e(7, 'New Year Fun Run', 'Athletics', '2027-01-03', '2027-01-03'),
 ]
 
