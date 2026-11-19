@@ -1,6 +1,6 @@
 # Personnel 2 (Dev B) — Task Guide: Programs, Events & Facilities
 
-**Base Integration Branch:** `feat/bcsd-portal-scaffold`
+**Base Integration Branch:** `development`
 **Primary Peer Reviewer:** Personnel 3 (Dev C)
 **Your Owned Files (Zero Overlap With Other Personnel):**
 1. **Programs:** `/src/features/programs/data/programs.ts`
@@ -14,15 +14,15 @@
 Work strictly from **PR #1 down to PR #12** in order. Merge one PR before starting the next:
 
 ```bash
-git checkout feat/bcsd-portal-scaffold
-git pull origin feat/bcsd-portal-scaffold
+git checkout development
+git pull origin development
 git checkout -b <branch-name>
 # 1. Paste the code into the exact path shown on Line 1 (// File: ...)
 # 2. Verify locally: npm run lint && npm run type-check
 git add <file-path>
 git commit -m "<commit-message>"
 git push -u origin <branch-name>
-# 3. Open PR targeting `feat/bcsd-portal-scaffold` using the PR Title & PR Description below
+# 3. Open PR targeting `development` using the PR Title & PR Description below
 ```
 
 ---
@@ -103,7 +103,7 @@ export const programsFixture: ApiResponse<Program[]> = {
 ---
 
 ### PR #2 — Events (Stage 1: Initial Creation)
-*(Merge PR #1 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #1 → pull `development`)*
 - **Target File:** `/src/features/events/data/events.ts`
 - **Branch:** `feat/events-initial-calendar`
 - **Commit:** `feat(events): add initial 2-event calendar fixture`
@@ -185,7 +185,7 @@ export function loadEventsFixture(
 ---
 
 ### PR #3 — Facilities (Stage 1: Initial Creation)
-*(Merge PR #2 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #2 → pull `development`)*
 - **Target File:** `/src/features/facilities/data/facilities.ts`
 - **Branch:** `feat/facilities-initial-entry`
 - **Commit:** `feat(facilities): add initial Libertad Sports Complex entry`
@@ -239,7 +239,7 @@ export const facilitiesFixture: ApiResponse<Facility[]> = {
 ## Wave 2 — Stage 2: Incomplete Details
 
 ### PR #4 — Programs (Stage 2: Incomplete Details)
-*(Merge PR #3 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #3 → pull `development`)*
 - **Target File:** `/src/features/programs/data/programs.ts`
 - **Branch:** `feat/programs-expand-draft`
 - **Commit:** `feat(programs): add competitive, community and inclusive programs draft`
@@ -365,7 +365,7 @@ export const programsFixture: ApiResponse<Program[]> = {
 ---
 
 ### PR #5 — Events (Stage 2: Incomplete Details)
-*(Merge PR #4 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #4 → pull `development`)*
 - **Target File:** `/src/features/events/data/events.ts`
 - **Branch:** `feat/events-full-draft`
 - **Commit:** `feat(events): add remaining seasonal events draft`
@@ -456,7 +456,7 @@ export function loadEventsFixture(
 ---
 
 ### PR #6 — Facilities (Stage 2: Incomplete Details)
-*(Merge PR #5 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #5 → pull `development`)*
 - **Target File:** `/src/features/facilities/data/facilities.ts`
 - **Branch:** `feat/facilities-add-venues-draft`
 - **Commit:** `feat(facilities): add covered gym and swimming pool entries draft`
@@ -540,7 +540,7 @@ export const facilitiesFixture: ApiResponse<Facility[]> = {
 ## Wave 3 — Stage 3: Enhancement & Correction
 
 ### PR #7 — Programs (Stage 3: Correction & Enhancement)
-*(Merge PR #6 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #6 → pull `development`)*
 - **Target File:** `/src/features/programs/data/programs.ts`
 - **Branch:** `fix/programs-replace-demo-and-typos`
 - **Commit:** `fix(programs): replace demo entry with Learn to Swim and fix typos`
@@ -672,7 +672,7 @@ export const programsFixture: ApiResponse<Program[]> = {
 ---
 
 ### PR #8 — Events (Stage 3: Correction)
-*(Merge PR #7 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #7 → pull `development`)*
 - **Target File:** `/src/features/events/data/events.ts`
 - **Branch:** `fix/events-typos-and-dates`
 - **Commit:** `fix(events): correct event title spellings and Youth Football Cup dates`
@@ -761,7 +761,7 @@ export function loadEventsFixture(
 ---
 
 ### PR #9 — Facilities (Stage 3: Correction & Enhancement)
-*(Merge PR #8 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #8 → pull `development`)*
 - **Target File:** `/src/features/facilities/data/facilities.ts`
 - **Branch:** `fix/facilities-typos-and-status`
 - **Commit:** `fix(facilities): fix venue spellings and add pool maintenance status note`
@@ -843,7 +843,7 @@ export const facilitiesFixture: ApiResponse<Facility[]> = {
 ## Wave 4 — Stage 4: Section Completion
 
 ### PR #10 — Programs (Stage 4: Completion)
-*(Merge PR #9 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #9 → pull `development`)*
 - **Target File:** `/src/features/programs/data/programs.ts`
 - **Branch:** `feat/programs-complete`
 - **Commit:** `feat(programs): add coach assignments and complete program descriptions`
@@ -1000,7 +1000,7 @@ export const programsFixture: ApiResponse<Program[]> = {
 ---
 
 ### PR #11 — Events (Stage 4: Completion)
-*(Merge PR #10 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #10 → pull `development`)*
 - **Target File:** `/src/features/events/data/events.ts`
 - **Branch:** `feat/events-complete`
 - **Commit:** `feat(events): add verified venues and featured flags to all events`
@@ -1089,7 +1089,7 @@ export function loadEventsFixture(
 ---
 
 ### PR #12 — Facilities (Stage 4: Completion)
-*(Merge PR #11 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #11 → pull `development`)*
 - **Target File:** `/src/features/facilities/data/facilities.ts`
 - **Branch:** `feat/facilities-complete`
 - **Commit:** `feat(facilities): complete amenities and verified addresses for all facilities`
