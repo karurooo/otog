@@ -6,11 +6,19 @@ export const downloadsFixture: ApiResponse<DownloadFile[]> = {
   data: [
     {
       id: 1,
-      name: 'Program Registration Form',
+      name: 'Program Regisration Form',
       file_type: 'TXT',
       size_kb: 1,
       updated_at: '2026-11-16',
       url: '/files/sample-form.txt',
+    },
+    {
+      id: 2,
+      name: 'Facilty Reservation Request',
+      file_type: 'PDF',
+      size_kb: 0,
+      updated_at: '2026-11-16',
+      url: '/files/missing-file.pdf',
     },
   ],
   message: 'OK',
@@ -26,8 +34,18 @@ export const faqsFixture: ApiResponse<Faq[]> = {
     },
     {
       id: 2,
+      question: 'How do I reserve a city facilty?',
+      answer: ['Submit a facility request via the Contact form at least 7 days in advance.'],
+    },
+    {
+      id: 3,
       question: 'Are city sports programs free?',
       answer: ['Most grassroots and community programs are free for Butuan City residents.'],
+    },
+    {
+      id: 4,
+      question: 'Who can I contact for assistance?',
+      answer: ['Answer pending'],
     },
   ],
   message: 'OK',
