@@ -20,6 +20,22 @@ export const featuredAthletesFixture: ApiResponse<Athlete[]> = {
       year: 2026,
       photo: null,
     },
+    {
+      id: 3,
+      full_name: 'Jomar P. Del Rosario',
+      sport: 'Boxng',
+      achievement: 'Achievement TBD',
+      year: 2026,
+      photo: null,
+    },
+    {
+      id: 4,
+      full_name: 'Trisha L. Ramos',
+      sport: 'Weighlifting',
+      achievement: 'Achievement TBD',
+      year: 2026,
+      photo: null,
+    },
   ],
   message: 'OK',
   errors: null,
@@ -35,8 +51,12 @@ const row = (
 
 export const medalTallyFixture: ApiResponse<MedalTallyRow[]> = {
   data: [
-    row('Palarong Pambansa', 2026, 6, 4, 9),
+    row('Palarong Pambanssa', 2026, 6, 4, 9),
     row('Batang Pinoy', 2026, 8, 7, 11),
+    row('PNG', 2026, 3, 2, 5),
+    row('CARAA', 2026, 12, 10, 14),
+    row('Palarong Pambansa', 2025, 5, 6, 8),
+    row('Batang Pinoy', 2025, 7, 5, 10),
   ],
   message: 'OK',
   errors: null,
