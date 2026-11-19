@@ -20,5 +20,4 @@ export const GOV_LINKS = [
 
 export const CITY_LINKS = [
   { label: 'Butuan City Website', href: 'https://butuan.gov.ph' },
-  { label: 'Transparancy Seal', href: '#' },
 ] as const
