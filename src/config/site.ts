@@ -6,7 +6,7 @@ export const SITE = {
   address: '2/F City Hall Complex, J. Rosales Ave., Butuan City, Agusan del Norte',
   phone: '(085) 342-5555',
   email: 'sports@butuan.gov.ph',
-  facebookUrl: '',
+  facebookUrl: 'https://www.facebook.com/ButuanCitySportsDepartment',
   officeHours: 'Mon–Fri, 8:00 AM – 5:00 PM',
   coordinates: { latitude: 8.9475, longitude: 125.5406 },
 } as const
