@@ -1,6 +1,6 @@
 # Personnel 3 (Dev C) — Task Guide: Athletes, News & Gallery
 
-**Base Integration Branch:** `feat/bcsd-portal-scaffold`
+**Base Integration Branch:** `development`
 **Primary Peer Reviewer:** Personnel 4 (Dev D)
 **Your Owned Files (Zero Overlap With Other Personnel):**
 1. **Athletes:** `/src/features/athletes/data/athletes.ts`
@@ -14,15 +14,15 @@
 Work strictly from **PR #1 down to PR #12** in order. Merge one PR before starting the next:
 
 ```bash
-git checkout feat/bcsd-portal-scaffold
-git pull origin feat/bcsd-portal-scaffold
+git checkout development
+git pull origin development
 git checkout -b <branch-name>
 # 1. Paste the code into the exact path shown on Line 1 (// File: ...)
 # 2. Verify locally: npm run lint && npm run type-check
 git add <file-path>
 git commit -m "<commit-message>"
 git push -u origin <branch-name>
-# 3. Open PR targeting `feat/bcsd-portal-scaffold` using the PR Title & PR Description below
+# 3. Open PR targeting `development` using the PR Title & PR Description below
 ```
 
 ---
@@ -102,7 +102,7 @@ export const medalTallyFixture: ApiResponse<MedalTallyRow[]> = {
 ---
 
 ### PR #2 — News (Stage 1: Initial Creation)
-*(Merge PR #1 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #1 → pull `development`)*
 - **Target File:** `/src/features/news/data/news.ts`
 - **Branch:** `feat/news-initial-articles`
 - **Commit:** `feat(news): add initial 2 news articles fixture`
@@ -180,7 +180,7 @@ export function loadNewsFixture(
 ---
 
 ### PR #3 — Gallery (Stage 1: Initial Creation)
-*(Merge PR #2 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #2 → pull `development`)*
 - **Target File:** `/src/features/gallery/data/gallery.ts`
 - **Branch:** `feat/gallery-initial-album`
 - **Commit:** `feat(gallery): add initial City Events photo album`
@@ -248,7 +248,7 @@ export const galleryFixture: ApiResponse<Album[]> = {
 ## Wave 2 — Stage 2: Incomplete Details
 
 ### PR #4 — Athletes (Stage 2: Incomplete Details)
-*(Merge PR #3 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #3 → pull `development`)*
 - **Target File:** `/src/features/athletes/data/athletes.ts`
 - **Branch:** `feat/athletes-expand-roster-draft`
 - **Commit:** `feat(athletes): expand featured athletes and multi-year medal tally draft`
@@ -344,7 +344,7 @@ export const medalTallyFixture: ApiResponse<MedalTallyRow[]> = {
 ---
 
 ### PR #5 — News (Stage 2: Incomplete Details)
-*(Merge PR #4 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #4 → pull `development`)*
 - **Target File:** `/src/features/news/data/news.ts`
 - **Branch:** `feat/news-draft-feed`
 - **Commit:** `feat(news): add advisory and feature articles draft`
@@ -462,7 +462,7 @@ export function loadNewsFixture(
 ---
 
 ### PR #6 — Gallery (Stage 2: Incomplete Details)
-*(Merge PR #5 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #5 → pull `development`)*
 - **Target File:** `/src/features/gallery/data/gallery.ts`
 - **Branch:** `feat/gallery-expand-albums-draft`
 - **Commit:** `feat(gallery): add Training album and expand Events photos draft`
@@ -543,7 +543,7 @@ export const galleryFixture: ApiResponse<Album[]> = {
 ## Wave 3 — Stage 3: Enhancement & Correction
 
 ### PR #7 — Athletes (Stage 3: Correction & Enhancement)
-*(Merge PR #6 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #6 → pull `development`)*
 - **Target File:** `/src/features/athletes/data/athletes.ts`
 - **Branch:** `fix/athletes-typos-and-achievements`
 - **Commit:** `fix(athletes): fix sport and competition spellings and add athlete achievements`
@@ -636,7 +636,7 @@ export const medalTallyFixture: ApiResponse<MedalTallyRow[]> = {
 ---
 
 ### PR #8 — News (Stage 3: Correction)
-*(Merge PR #7 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #7 → pull `development`)*
 - **Target File:** `/src/features/news/data/news.ts`
 - **Branch:** `fix/news-typos-and-dates`
 - **Commit:** `fix(news): correct article title spellings and ISO published_at date`
@@ -754,7 +754,7 @@ export function loadNewsFixture(
 ---
 
 ### PR #9 — Gallery (Stage 3: Correction & Enhancement)
-*(Merge PR #8 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #8 → pull `development`)*
 - **Target File:** `/src/features/gallery/data/gallery.ts`
 - **Branch:** `fix/gallery-typos-and-alt-text`
 - **Commit:** `fix(gallery): correct album/photo spellings and add accessible alt text`
@@ -833,7 +833,7 @@ export const galleryFixture: ApiResponse<Album[]> = {
 ## Wave 4 — Stage 4: Section Completion
 
 ### PR #10 — Athletes (Stage 4: Completion)
-*(Merge PR #9 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #9 → pull `development`)*
 - **Target File:** `/src/features/athletes/data/athletes.ts`
 - **Branch:** `feat/athletes-complete`
 - **Commit:** `feat(athletes): complete 2025 PNG and CARAA medal tally records`
@@ -928,7 +928,7 @@ export const medalTallyFixture: ApiResponse<MedalTallyRow[]> = {
 ---
 
 ### PR #11 — News (Stage 4: Completion)
-*(Merge PR #10 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #10 → pull `development`)*
 - **Target File:** `/src/features/news/data/news.ts`
 - **Branch:** `feat/news-complete`
 - **Commit:** `feat(news): finalize full article bodies across all news items`
@@ -1057,7 +1057,7 @@ export function loadNewsFixture(
 ---
 
 ### PR #12 — Gallery (Stage 4: Completion)
-*(Merge PR #11 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #11 → pull `development`)*
 - **Target File:** `/src/features/gallery/data/gallery.ts`
 - **Branch:** `feat/gallery-complete`
 - **Commit:** `feat(gallery): complete City Events (6 photos) and Training Clinics (4 photos) albums`

@@ -25,6 +25,42 @@ const items: NewsItem[] = [
     ],
     cover: null,
   },
+  {
+    id: 3,
+    title: 'Libertad Aquatic Center Maintenace Advisory',
+    category: 'advisory',
+    published_at: '2026-11-14',
+    excerpt: 'Scheduled filtration maintenance begins this week.',
+    body: ['Pool operations are temporarily paused for filtration pump maintenance.'],
+    cover: null,
+  },
+  {
+    id: 4,
+    title: 'Coach Spotlight: Building Youth Baskteball Leaders',
+    category: 'feature',
+    published_at: '11/13/2026',
+    excerpt: 'How barangay clinics are mentoring the next generation of players.',
+    body: ['Draft feature body.'],
+    cover: null,
+  },
+  {
+    id: 5,
+    title: 'Inter-Barangay League Semifinals Schedule Released',
+    category: 'announcement',
+    published_at: '2026-11-12',
+    excerpt: 'Draft excerpt TBD',
+    body: ['Draft body TBD.'],
+    cover: null,
+  },
+  {
+    id: 6,
+    title: 'Balangay Fun Run Draws Over 2,000 Participants',
+    category: 'result',
+    published_at: '2026-11-11',
+    excerpt: 'Draft excerpt TBD',
+    body: ['Draft body TBD.'],
+    cover: null,
+  },
 ]
 
 export function loadNewsFixture(

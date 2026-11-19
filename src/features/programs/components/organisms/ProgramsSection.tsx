@@ -103,6 +103,16 @@ export function ProgramsSection() {
               <strong>Coach:</strong> {selected.coach_name ?? 'To be announced'}
               {selected.coach_contact && ` · ${selected.coach_contact}`}
             </p>
+            {selected.demo_url && (
+              <a
+                href={selected.demo_url}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary inline-block rounded-md px-4 py-2 text-sm font-semibold text-white"
+              >
+                Play demo
+              </a>
+            )}
             {selected.requirements.length > 0 && (
               <>
                 <p className="font-semibold">Requirements</p>

@@ -1,13 +1,12 @@
 import type { ApiResponse } from '@/types/api'
 import type { SiteStats } from '../types/siteStats'
 
-// Stage 1: Initial baseline metrics
 export const siteStatsFixture: ApiResponse<SiteStats> = {
   data: {
-    athletes_count: 500,
-    programs_count: 2,
-    facilities_count: 0,
-    medals_count: 0,
+    athletes_count: 1250,
+    programs_count: 12,
+    facilities_count: 8,
+    medals_count: 64,
     medals_year: 2026,
   },
   message: 'OK',

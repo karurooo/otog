@@ -17,4 +17,6 @@ export interface Program {
   coach_name: string | null
   coach_contact: string | null
   is_featured: boolean
+  /** Optional playable demo under `public/`, opened in a new tab from the details dialog. */
+  demo_url?: string
 }

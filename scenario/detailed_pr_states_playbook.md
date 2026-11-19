@@ -1,6 +1,6 @@
 # Detailed 4-Stage PR States, PR Descriptions & Zero-Merge-Conflict Sequence
 
-This enhanced playbook pairs with the **`feat/bcsd-portal-scaffold`** branch (commit `e8dfbdd`) to give **4 personnel** a complete, conflict-free **48-PR simulation** (12 sections × 4 stages).
+This enhanced playbook pairs with the **`development`** branch to give **4 personnel** a complete, conflict-free **48-PR simulation** (12 sections × 4 stages).
 
 Every PR below includes:
 - Exact **branch name**, **Conventional Commit message**, and **PR title**
@@ -9,9 +9,9 @@ Every PR below includes:
 
 ---
 
-## 1. Initial Scaffold Branch (`feat/bcsd-portal-scaffold`)
+## 1. Base Branch (`development`)
 
-The branch **`feat/bcsd-portal-scaffold`** has been created locally from `development` and verified with `npm run lint`, `npm run type-check`, and `npm run build`.
+The **`development`** branch holds the scaffold (verified with `npm run lint`, `npm run type-check`, and `npm run build`) and is the integration base for the whole training.
 
 - **Project scaffold kept intact:** Full React + TypeScript + Vite app, routing, Tailwind styling, `AppShell`, all 10 section components (including built-in `EmptyState` views), hooks, and types.
 - **11 section data/config files reset to empty/minimal scaffold states:**
@@ -28,9 +28,9 @@ The branch **`feat/bcsd-portal-scaffold`** has been created locally from `develo
   11. [site.ts](/src/config/site.ts) (empty contact fields, `GOV_LINKS = []`, `CITY_LINKS = []`)
 
 ### Facilitator Push Command
-Push the initial scaffold branch to GitHub so all 4 personnel branch from and target `feat/bcsd-portal-scaffold` as their base integration branch:
+The scaffold is already pushed. All 4 personnel branch from and target `development` as their base integration branch (no extra push needed). If you ever need to publish it again:
 ```bash
-git push -u origin feat/bcsd-portal-scaffold
+git push -u origin development
 ```
 
 ---
@@ -40,12 +40,12 @@ git push -u origin feat/bcsd-portal-scaffold
 1. **Zero Cross-Dev File Overlap:** Dev A, Dev B, Dev C, and Dev D own completely disjoint files and can open/merge PRs in parallel during every Wave.
 2. **Mandatory Sync Before Every New Branch:**
    ```bash
-   git checkout feat/bcsd-portal-scaffold
-   git pull origin feat/bcsd-portal-scaffold
+   git checkout development
+   git pull origin development
    git checkout -b <branch-name>
    ```
 3. **Sequential Order Inside Each Developer's Track:** Complete and merge Step 1 → pull base branch → start Step 2 → merge → pull base branch → start Step 3.
-   - **Critical for Dev D:** Because Contact and Footer both edit `/src/config/site.ts`, Dev D must **always merge Contact (Step 2) and pull `feat/bcsd-portal-scaffold` before branching for Footer (Step 3)**.
+   - **Critical for Dev D:** Because Contact and Footer both edit `/src/config/site.ts`, Dev D must **always merge Contact (Step 2) and pull `development` before branching for Footer (Step 3)**.
 
 | Wave | Stage | Dev A (Parallel) | Dev B (Parallel) | Dev C (Parallel) | Dev D (Parallel — Strict Order) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -2882,8 +2882,8 @@ export const galleryFixture: ApiResponse<Album[]> = {
 > **Dev D Zero-Conflict Rule (Shared `/src/config/site.ts`)**
 > In every Wave, Dev D **must** merge **Contact (Step 2)** and run:
 > ```bash
-> git checkout feat/bcsd-portal-scaffold
-> git pull origin feat/bcsd-portal-scaffold
+> git checkout development
+> git pull origin development
 > ```
 > **before** creating the branch for **Footer (Step 3)**.
 
@@ -3258,7 +3258,7 @@ export const GOV_LINKS: readonly { label: string; href: string }[] = []
 export const CITY_LINKS: readonly { label: string; href: string }[] = []
 ```
 
-*(Merge PR 1.2 → run `git checkout feat/bcsd-portal-scaffold && git pull origin feat/bcsd-portal-scaffold` → cut branch for PR 1.3)*
+*(Merge PR 1.2 → run `git checkout development && git pull origin development` → cut branch for PR 1.3)*
 
 ##### PR 1.3 (Dev D) — Footer Stage 1: Initial Creation
 - **Branch:** `feat/footer-initial-gov-links`
@@ -3362,7 +3362,7 @@ export const CITY_LINKS = [
 ] as const
 ```
 
-*(Merge PR 2.2 → run `git checkout feat/bcsd-portal-scaffold && git pull origin feat/bcsd-portal-scaffold` → cut branch for PR 2.3)*
+*(Merge PR 2.2 → run `git checkout development && git pull origin development` → cut branch for PR 2.3)*
 
 ##### PR 2.3 (Dev D) — Footer Stage 2: Incomplete Details
 - **Branch:** `feat/footer-links-draft`
@@ -3473,7 +3473,7 @@ export const CITY_LINKS = [
 ] as const
 ```
 
-*(Merge PR 3.2 → run `git checkout feat/bcsd-portal-scaffold && git pull origin feat/bcsd-portal-scaffold` → cut branch for PR 3.3)*
+*(Merge PR 3.2 → run `git checkout development && git pull origin development` → cut branch for PR 3.3)*
 
 ##### PR 3.3 (Dev D) — Footer Stage 3: Correction & Enhancement
 - **Branch:** `fix/footer-spelling-and-links`
@@ -3581,7 +3581,7 @@ export const CITY_LINKS = [
 ] as const
 ```
 
-*(Merge PR 4.2 → run `git checkout feat/bcsd-portal-scaffold && git pull origin feat/bcsd-portal-scaffold` → cut branch for PR 4.3)*
+*(Merge PR 4.2 → run `git checkout development && git pull origin development` → cut branch for PR 4.3)*
 
 ##### PR 4.3 (Dev D) — Footer Stage 4: Completion of Section
 - **Branch:** `feat/footer-complete`
@@ -3696,7 +3696,7 @@ export function SiteFooter() {
 
 ---
 
-## 7. Final Release PR (`feat/bcsd-portal-scaffold` → `main`)
+## 7. Final Release PR (`development` → `main`)
 
 - **PR Title:** `chore(release): v1.0.0 — Complete Butuan City Sports Department Portal`
 
