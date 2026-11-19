@@ -3,6 +3,8 @@ export interface NavItem {
   label: string
 }
 
-// Single source for section anchors (nav, scroll-spy, footer). Order = page order.
-// SCAFFOLD: populated by Dev A (Section 1: Navigation Link).
-export const NAV_ITEMS: readonly NavItem[] = []
+// Stage 1: Initial navigation links (Home and About only)
+export const NAV_ITEMS: readonly NavItem[] = [
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+]
