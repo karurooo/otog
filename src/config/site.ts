@@ -21,4 +21,7 @@ export const GOV_LINKS = [
 export const CITY_LINKS = [
   { label: 'Butuan City Website', href: 'https://butuan.gov.ph' },
 ] as const
+<<<<<<< HEAD
 ```
+=======
+>>>>>>> 3719528 (fix(site): resolve unterminated template literal in site.ts)
