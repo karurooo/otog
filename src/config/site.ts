@@ -22,4 +22,6 @@ export const GOV_LINKS = [
 export const CITY_LINKS = [
   { label: 'Butuan City Website', href: 'https://butuan.gov.ph' },
   { label: 'Transparency Seal', href: 'https://butuan.gov.ph/transparency-seal' },
+  { label: "Citizen's Charter", href: 'https://butuan.gov.ph/citizens-charter' },
+  { label: 'Freedom of Information (FOI)', href: 'https://www.foi.gov.ph' },
 ] as const
