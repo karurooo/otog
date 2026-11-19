@@ -57,6 +57,8 @@ export const medalTallyFixture: ApiResponse<MedalTallyRow[]> = {
     row('CARAA', 2026, 12, 10, 14),
     row('Palarong Pambansa', 2025, 5, 6, 8),
     row('Batang Pinoy', 2025, 7, 5, 10),
+    row('PNG', 2025, 2, 3, 4),
+    row('CARAA', 2025, 10, 9, 12),
   ],
   message: 'OK',
   errors: null,
