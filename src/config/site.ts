@@ -16,10 +16,10 @@ export const GOV_LINKS = [
   { label: 'Office of the Vice President', href: 'https://ovp.gov.ph' },
   { label: 'Senate', href: 'https://www.senate.gov.ph' },
   { label: 'House of Representatives', href: 'https://www.congress.gov.ph' },
-  { label: 'Supreem Court', href: 'https://sc.judiciary.gov.ph' },
+  { label: 'Supreme Court', href: 'https://sc.judiciary.gov.ph' },
 ] as const
 
 export const CITY_LINKS = [
   { label: 'Butuan City Website', href: 'https://butuan.gov.ph' },
-  { label: 'Transparancy Seal', href: '#' },
+  { label: 'Transparency Seal', href: 'https://butuan.gov.ph/transparency-seal' },
 ] as const
