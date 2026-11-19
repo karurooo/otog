@@ -1,3 +1,4 @@
+// File: /src/features/news/data/news.ts
 import type { PaginatedResponse } from '@/types/api'
 import type { NewsItem } from '../types/newsItem'
 
