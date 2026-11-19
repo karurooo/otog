@@ -26,9 +26,18 @@ export const galleryFixture: ApiResponse<Album[]> = {
       id: 1,
       title: 'City Events',
       photos: [
-        tile(1, 'Opening Parade', 'Athletes marching during opening parade', 600, 400, 210),
-        tile(2, 'Track Finals', 'Sprinters starting 100m finals', 400, 600, 240),
-        tile(3, 'Awarding', 'Medalists on the podium', 600, 450, 180),
+        tile(1, 'Opening Parade', 'photo', 600, 400, 210),
+        tile(2, 'Track Finals', 'photo', 400, 600, 240),
+        tile(3, 'Awarding', 'photo', 600, 450, 180),
+        tile(4, 'Fun Run Start', 'photo', 500, 500, 150),
+      ],
+    },
+    {
+      id: 2,
+      title: 'Traning Clinics',
+      photos: [
+        tile(5, 'Swiming Clinic', 'photo', 600, 400, 200),
+        tile(6, 'Basketball Drills', 'photo', 400, 600, 30),
       ],
     },
   ],
