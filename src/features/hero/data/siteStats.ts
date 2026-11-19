@@ -1,14 +1,14 @@
 import type { ApiResponse } from '@/types/api'
 import type { SiteStats } from '../types/siteStats'
 
-// Stage 1: Initial baseline metrics
+// Stage 2: Incomplete counts and outdated medals_year
 export const siteStatsFixture: ApiResponse<SiteStats> = {
   data: {
-    athletes_count: 500,
-    programs_count: 2,
-    facilities_count: 0,
-    medals_count: 0,
-    medals_year: 2026,
+    athletes_count: 950,
+    programs_count: 4,
+    facilities_count: 0, // TODO: pending facilities count
+    medals_count: 0, // TODO: pending verified medal tally
+    medals_year: 2024,
   },
   message: 'OK',
   errors: null,
