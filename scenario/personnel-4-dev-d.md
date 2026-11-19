@@ -1,6 +1,6 @@
 # Personnel 4 (Dev D) — Task Guide: Resources, Contact & Footer
 
-**Base Integration Branch:** `feat/bcsd-portal-scaffold`
+**Base Integration Branch:** `development`
 **Primary Peer Reviewer:** Personnel 1 (Dev A)
 **Your Owned Files (Zero Overlap With Other Personnel):**
 1. **Resources:** `/src/features/resources/data/resources.ts`
@@ -11,20 +11,20 @@
 
 ## Golden Zero-Conflict Workflow (Repeat Before Every PR)
 
-> **CRITICAL FOR DEV D:** Both **Contact** and **Footer** edit `/src/config/site.ts`. Never open a Contact PR and a Footer PR at the same time. Always merge **Contact** and pull `feat/bcsd-portal-scaffold` **before** branching for **Footer**.
+> **CRITICAL FOR DEV D:** Both **Contact** and **Footer** edit `/src/config/site.ts`. Never open a Contact PR and a Footer PR at the same time. Always merge **Contact** and pull `development` **before** branching for **Footer**.
 
 Work strictly from **PR #1 down to PR #12** in order:
 
 ```bash
-git checkout feat/bcsd-portal-scaffold
-git pull origin feat/bcsd-portal-scaffold
+git checkout development
+git pull origin development
 git checkout -b <branch-name>
 # 1. Paste the code into the exact path shown on Line 1 (// File: ...)
 # 2. Verify locally: npm run lint && npm run type-check
 git add <file-path>
 git commit -m "<commit-message>"
 git push -u origin <branch-name>
-# 3. Open PR targeting `feat/bcsd-portal-scaffold` using the PR Title & PR Description below
+# 3. Open PR targeting `development` using the PR Title & PR Description below
 ```
 
 ---
@@ -95,7 +95,7 @@ export const faqsFixture: ApiResponse<Faq[]> = {
 ---
 
 ### PR #2 — Contact (Stage 1: Initial Creation)
-*(Merge PR #1 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #1 → pull `development`)*
 - **Target File:** `/src/config/site.ts`
 - **Branch:** `feat/contact-initial-site-info`
 - **Commit:** `feat(contact): initialize base SITE contact address and office hours`
@@ -140,7 +140,7 @@ export const CITY_LINKS: readonly { label: string; href: string }[] = []
 ---
 
 ### PR #3 — Footer (Stage 1: Initial Creation)
-*(CHECKPOINT: Wait for PR #2 to merge, then run `git checkout feat/bcsd-portal-scaffold && git pull origin feat/bcsd-portal-scaffold` before branching!)*
+*(CHECKPOINT: Wait for PR #2 to merge, then run `git checkout development && git pull origin development` before branching!)*
 - **Target File:** `/src/config/site.ts`
 - **Branch:** `feat/footer-initial-gov-links`
 - **Commit:** `feat(footer): add initial national government and city footer links`
@@ -193,7 +193,7 @@ export const CITY_LINKS = [
 ## Wave 2 — Stage 2: Incomplete Details
 
 ### PR #4 — Resources (Stage 2: Incomplete Details)
-*(Merge PR #3 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #3 → pull `development`)*
 - **Target File:** `/src/features/resources/data/resources.ts`
 - **Branch:** `feat/resources-expand-draft`
 - **Commit:** `feat(resources): add facility reservation form and additional FAQs draft`
@@ -279,7 +279,7 @@ export const faqsFixture: ApiResponse<Faq[]> = {
 ---
 
 ### PR #5 — Contact (Stage 2: Incomplete Details)
-*(Merge PR #4 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #4 → pull `development`)*
 - **Target File:** `/src/config/site.ts`
 - **Branch:** `feat/contact-details-draft`
 - **Commit:** `feat(contact): add draft phone, email and full address`
@@ -334,7 +334,7 @@ export const CITY_LINKS = [
 ---
 
 ### PR #6 — Footer (Stage 2: Incomplete Details)
-*(CHECKPOINT: Wait for PR #5 to merge, then run `git checkout feat/bcsd-portal-scaffold && git pull origin feat/bcsd-portal-scaffold` before branching!)*
+*(CHECKPOINT: Wait for PR #5 to merge, then run `git checkout development && git pull origin development` before branching!)*
 - **Target File:** `/src/config/site.ts`
 - **Branch:** `feat/footer-links-draft`
 - **Commit:** `feat(footer): expand government and city transparency links draft`
@@ -394,7 +394,7 @@ export const CITY_LINKS = [
 ## Wave 3 — Stage 3: Enhancement & Correction
 
 ### PR #7 — Resources (Stage 3: Correction)
-*(Merge PR #6 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #6 → pull `development`)*
 - **Target File:** `/src/features/resources/data/resources.ts`
 - **Branch:** `fix/resources-typos-and-links`
 - **Commit:** `fix(resources): correct spelling errors and repair broken form URL`
@@ -478,7 +478,7 @@ export const faqsFixture: ApiResponse<Faq[]> = {
 ---
 
 ### PR #8 — Contact (Stage 3: Correction)
-*(Merge PR #7 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #7 → pull `development`)*
 - **Target File:** `/src/config/site.ts`
 - **Branch:** `fix/contact-address-and-email`
 - **Commit:** `fix(contact): correct Butuan City spelling and .gov.ph email domain`
@@ -533,7 +533,7 @@ export const CITY_LINKS = [
 ---
 
 ### PR #9 — Footer (Stage 3: Correction)
-*(CHECKPOINT: Wait for PR #8 to merge, then run `git checkout feat/bcsd-portal-scaffold && git pull origin feat/bcsd-portal-scaffold` before branching!)*
+*(CHECKPOINT: Wait for PR #8 to merge, then run `git checkout development && git pull origin development` before branching!)*
 - **Target File:** `/src/config/site.ts`
 - **Branch:** `fix/footer-spelling-and-links`
 - **Commit:** `fix(footer): fix Supreme Court and Transparency Seal spellings and URL`
@@ -590,7 +590,7 @@ export const CITY_LINKS = [
 ## Wave 4 — Stage 4: Section Completion
 
 ### PR #10 — Resources (Stage 4: Completion)
-*(Merge PR #9 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #9 → pull `development`)*
 - **Target File:** `/src/features/resources/data/resources.ts`
 - **Branch:** `feat/resources-complete`
 - **Commit:** `feat(resources): add Parent Consent Waiver and complete detailed FAQ answers`
@@ -690,7 +690,7 @@ export const faqsFixture: ApiResponse<Faq[]> = {
 ---
 
 ### PR #11 — Contact (Stage 4: Completion)
-*(Merge PR #10 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #10 → pull `development`)*
 - **Target File:** `/src/config/site.ts`
 - **Branch:** `feat/contact-complete`
 - **Commit:** `feat(contact): add official Facebook page URL and finalize contact config`
@@ -745,7 +745,7 @@ export const CITY_LINKS = [
 ---
 
 ### PR #12 — Footer (Stage 4: Completion)
-*(CHECKPOINT: Wait for PR #11 to merge, then run `git checkout feat/bcsd-portal-scaffold && git pull origin feat/bcsd-portal-scaffold` before branching!)*
+*(CHECKPOINT: Wait for PR #11 to merge, then run `git checkout development && git pull origin development` before branching!)*
 - **Target Files:** `/src/config/site.ts` and `/src/components/layout/AppShell/SiteFooter.tsx`
 - **Branch:** `feat/footer-complete`
 - **Commit:** `feat(footer): add Citizen's Charter and FOI links and harden rel attributes`

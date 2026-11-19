@@ -5,10 +5,10 @@ This training playbook turns the **Butuan City Sports Department (`sports-depart
 > [!IMPORTANT]
 > **Built-in Repository Guardrails Already Active**
 > Participants will experience real production gates enforced by this repo:
-> - **Branch baseline:** Work branches off `feat/bcsd-portal-scaffold` and merges back via Pull Request; `main` is reserved for the final release PR.
+> - **Branch baseline:** Work branches off `development` and merges back via Pull Request; `main` is reserved for the final release PR.
 > - **Commit message hook ([commit-msg](/.husky/commit-msg)):** Enforces Conventional Commits (`feat|fix|style|refactor|chore|docs|test(scope): subject`).
 > - **Pre-commit hook ([pre-commit](/.husky/pre-commit)):** Runs `npm run lint` before every commit.
-> - **GitHub Actions CI ([ci.yml](/.github/workflows/ci.yml)):** Runs `lint`, `type-check`, `test`, `build`, and `check:bundle` (≤ 200 KB gzipped) on every PR to `feat/bcsd-portal-scaffold`, `development`, `staging`, or `main`.
+> - **GitHub Actions CI ([ci.yml](/.github/workflows/ci.yml)):** Runs `lint`, `type-check`, `test`, `build`, and `check:bundle` (≤ 200 KB gzipped) on every PR to `development`, `staging`, or `main`.
 
 ---
 
@@ -49,7 +49,7 @@ flowchart LR
 | **Stage 1: Initial Creation** | Dev picks up an assigned GitHub Issue and delivers the initial structure/baseline for the section. | `git checkout -b feat/<section>-init` from `development`, atomic Conventional Commits, opening a **Draft PR**, marking **Ready for Review**, linking Issues (`Refs #ID`), passing CI. |
 | **Stage 2: Incomplete Details** | Dev submits a partial implementation with intentionally missing/placeholder details (missing fields, unverified stats, incomplete lists, or missing edge-case UI). Reviewer catches the gaps. | **Code Review** (`Request Changes`, inline comments, **GitHub Suggested Changes**), pushing follow-up commits to an open PR, or merging an agreed MVP while filing a tracked follow-up GitHub Issue (`stage:2-incomplete`). |
 | **Stage 3: Enhancement or Correction** | Stakeholders/QA report typos, wrong data, UI/UX tweaks, or outdated demo entries (plus concurrent edits on shared files). | Creating `fix/<section>-*` / `refactor/<section>-*` branches, syncing with `git fetch origin && git rebase origin/development` (or merge), **resolving merge conflicts**, attaching before/after screenshots in PR descriptions, `git revert` drill. |
-| **Stage 4: Completion of Section** | Final sign-off: replacing all `TODO`/`Sample` placeholders, updating unit tests (`vitest`), checking accessibility & bundle budget, closing all open issues. | Automated issue closing (`Closes #ID`), Squash & Merge, deleting merged branches, final **Release PR (`feat/bcsd-portal-scaffold` → `main`)** with GitHub Release notes & tag `v1.0.0`. |
+| **Stage 4: Completion of Section** | Final sign-off: replacing all `TODO`/`Sample` placeholders, updating unit tests (`vitest`), checking accessibility & bundle budget, closing all open issues. | Automated issue closing (`Closes #ID`), Squash & Merge, deleting merged branches, final **Release PR (`development` → `main`)** with GitHub Release notes & tag `v1.0.0`. |
 
 ---
 
@@ -213,24 +213,24 @@ To make the training genuinely mirror day-to-day engineering, inject these 5 rea
 2. **Draft PR → Request Changes → Suggested Changes (Sprint 2):**
    Every reviewer must submit at least **1 inline comment**, **1 GitHub Suggested Change block**, and **1 `Request Changes`** review. Authors must commit the suggestion from the GitHub UI, pull locally (`git pull`), push an additional fix commit, and click **Re-request review**.
 3. **Controlled Merge Conflict Resolution (once, after Wave 3):** Waves 1-3 are conflict-free by design (disjoint files). This single drill adds one planned conflict.
-   - **Carlo (Dev A) + Ramil (Dev D):** Both branch from `feat/bcsd-portal-scaffold` at the same commit and modify `SITE` in [site.ts](/src/config/site.ts). Carlo merges first; Ramil must pull/rebase `origin/feat/bcsd-portal-scaffold`, resolve the conflict locally without losing Carlo's changes, run `npm test`, and push.
+   - **Carlo (Dev A) + Ramil (Dev D):** Both branch from `development` at the same commit and modify `SITE` in [site.ts](/src/config/site.ts). Carlo merges first; Ramil must pull/rebase `origin/development`, resolve the conflict locally without losing Carlo's changes, run `npm test`, and push.
 4. **CI Failure Triage (Sprint 3):**
    One dev pushes an unused variable or TypeScript type mismatch so [ci.yml](/.github/workflows/ci.yml) fails on the PR. Practice reading GitHub Actions logs, fixing locally, and confirming green checks before merge.
 5. **Release PR & Tagging (End of Sprint 4):**
-   Once all 12 sections are complete on `feat/bcsd-portal-scaffold`, Carlo (owner) opens the **Release PR (`feat/bcsd-portal-scaffold` → `main`)** with auto-generated release notes, gets sign-off from Patrick, Cliff and Ramil, merges, and creates GitHub Release **`v1.0.0`**.
+   Once all 12 sections are complete on `development`, Carlo (owner) opens the **Release PR (`development` → `main`)** with auto-generated release notes, gets sign-off from Patrick, Cliff and Ramil, merges, and creates GitHub Release **`v1.0.0`**.
 
 ---
 
 ## 6. Facilitator Pre-Training Setup Checklist
 
 Before kicking off the workshop on GitHub:
-- [ ] **Branch Protection on `main`, `development` and `feat/bcsd-portal-scaffold`:**
+- [ ] **Branch Protection on `main` and `development`:**
   - Require Pull Request before merging (no direct pushes).
   - Require at least **1 approving review** (dismiss stale approvals on new pushes).
   - Require status checks to pass (`frontend` job from [ci.yml](/.github/workflows/ci.yml)).
   - Enable "Automatically delete head branches" after merge.
 - [ ] **Create GitHub Labels & 4 Milestones** (Sprint 1–4) listed in Section 3.
 - [ ] **Add a PR Template** at `.github/PULL_REQUEST_TEMPLATE.md` and Issue Templates at `.github/ISSUE_TEMPLATE/` so every participant gets structured forms automatically.
-- [x] **Starting state decided: scaffold branch `feat/bcsd-portal-scaffold`** (11 data/config files empty, see the playbook section 1), so Stage 1 builds each section's content from scratch. The two options below are superseded:
+- [x] **Starting state decided: scaffold branch `development`** (11 data/config files empty, see the playbook section 1), so Stage 1 builds each section's content from scratch. The two options below are superseded:
   - *Option A (Fastest — Content & Refinement Track):* Keep the current scaffolded components in `development` (which already have `PLACEHOLDER CONTENT` & `TODO(T-23)` markers) and have participants treat Stage 1 as replacing scaffold placeholders with initial real content/features.
   - *Option B (From-Scratch Component Track):* Create a training reset branch where the 12 sections start as stubs/placeholders using [SectionPlaceholder.tsx](/src/components/common/SectionPlaceholder.tsx) so Stage 1 truly builds each section from scratch.

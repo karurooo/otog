@@ -1,6 +1,6 @@
 # Personnel 1 (Dev A) — Task Guide: Navigation Link, Home & About
 
-**Base Integration Branch:** `feat/bcsd-portal-scaffold`
+**Base Integration Branch:** `development`
 **Primary Peer Reviewer:** Personnel 2 (Dev B)
 **Your Owned Files (Zero Overlap With Other Personnel):**
 1. **Navigation Link:** `/src/config/navigation.ts`
@@ -14,15 +14,15 @@
 Work strictly from **PR #1 down to PR #12** in order. Merge one PR before starting the next:
 
 ```bash
-git checkout feat/bcsd-portal-scaffold
-git pull origin feat/bcsd-portal-scaffold
+git checkout development
+git pull origin development
 git checkout -b <branch-name>
 # 1. Paste the code into the exact path shown on Line 1 (// File: ...)
 # 2. Verify locally: npm run lint && npm run type-check
 git add <file-path>
 git commit -m "<commit-message>"
 git push -u origin <branch-name>
-# 3. Open PR targeting `feat/bcsd-portal-scaffold` using the PR Title & PR Description below
+# 3. Open PR targeting `development` using the PR Title & PR Description below
 ```
 
 ---
@@ -70,7 +70,7 @@ export const NAV_ITEMS: readonly NavItem[] = [
 ---
 
 ### PR #2 — Home (Stage 1: Initial Creation)
-*(Wait for PR #1 to merge, then run `git checkout feat/bcsd-portal-scaffold && git pull origin feat/bcsd-portal-scaffold`)*
+*(Wait for PR #1 to merge, then run `git checkout development && git pull origin development`)*
 - **Target File:** `/src/features/hero/data/siteStats.ts`
 - **Branch:** `feat/home-initial-stats`
 - **Commit:** `feat(home): initialize hero site stats baseline figures`
@@ -115,7 +115,7 @@ export const siteStatsFixture: ApiResponse<SiteStats> = {
 ---
 
 ### PR #3 — About (Stage 1: Initial Creation)
-*(Merge PR #2 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #2 → pull `development`)*
 - **Target File:** `/src/features/about/data/about.ts`
 - **Branch:** `feat/about-initial-draft`
 - **Commit:** `feat(about): add initial mandate, mission and vision draft`
@@ -170,7 +170,7 @@ export const aboutFixture: ApiResponse<About> = {
 ## Wave 2 — Stage 2: Incomplete Details
 
 ### PR #4 — Navigation Link (Stage 2: Incomplete Details)
-*(Merge PR #3 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #3 → pull `development`)*
 - **Target File:** `/src/config/navigation.ts`
 - **Branch:** `feat/nav-all-links-draft`
 - **Commit:** `feat(nav): add remaining navigation links draft`
@@ -221,7 +221,7 @@ export const NAV_ITEMS: readonly NavItem[] = [
 ---
 
 ### PR #5 — Home (Stage 2: Incomplete Details)
-*(Merge PR #4 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #4 → pull `development`)*
 - **Target File:** `/src/features/hero/data/siteStats.ts`
 - **Branch:** `feat/home-draft-stats`
 - **Commit:** `feat(home): add partial draft figures to hero stats`
@@ -270,7 +270,7 @@ export const siteStatsFixture: ApiResponse<SiteStats> = {
 ---
 
 ### PR #6 — About (Stage 2: Incomplete Details)
-*(Merge PR #5 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #5 → pull `development`)*
 - **Target File:** `/src/features/about/data/about.ts`
 - **Branch:** `feat/about-officials-wip`
 - **Commit:** `feat(about): add officer message and draft officials roster`
@@ -356,7 +356,7 @@ export const aboutFixture: ApiResponse<About> = {
 ## Wave 3 — Stage 3: Enhancement & Correction
 
 ### PR #7 — Navigation Link (Stage 3: Correction)
-*(Merge PR #6 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #6 → pull `development`)*
 - **Target File:** `/src/config/navigation.ts`
 - **Branch:** `fix/nav-spelling-corrections`
 - **Commit:** `fix(nav): correct misspelled navigation link labels`
@@ -407,7 +407,7 @@ export const NAV_ITEMS: readonly NavItem[] = [
 ---
 
 ### PR #8 — Home (Stage 3: Correction)
-*(Merge PR #7 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #7 → pull `development`)*
 - **Target File:** `/src/features/hero/data/siteStats.ts`
 - **Branch:** `fix/home-stats-year-and-counts`
 - **Commit:** `fix(home): correct medals year to 2026 and add facility/medal estimates`
@@ -454,7 +454,7 @@ export const siteStatsFixture: ApiResponse<SiteStats> = {
 ---
 
 ### PR #9 — About (Stage 3: Correction & Enhancement)
-*(Merge PR #8 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #8 → pull `development`)*
 - **Target File:** `/src/features/about/data/about.ts`
 - **Branch:** `fix/about-typos-and-message`
 - **Commit:** `fix(about): fix typos in mandate, vision, title and expand officer message`
@@ -538,7 +538,7 @@ export const aboutFixture: ApiResponse<About> = {
 ## Wave 4 — Stage 4: Section Completion
 
 ### PR #10 — Navigation Link (Stage 4: Completion)
-*(Merge PR #9 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #9 → pull `development`)*
 - **Target File:** `/src/config/navigation.ts`
 - **Branch:** `feat/nav-complete`
 - **Commit:** `feat(nav): finalize navigation anchor IDs matching HomePage sections`
@@ -588,7 +588,7 @@ export const NAV_ITEMS: readonly NavItem[] = [
 ---
 
 ### PR #11 — Home (Stage 4: Completion)
-*(Merge PR #10 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #10 → pull `development`)*
 - **Target File:** `/src/features/hero/data/siteStats.ts`
 - **Branch:** `feat/home-complete-stats`
 - **Commit:** `feat(home): finalize verified 2026 Butuan City sports statistics`
@@ -633,7 +633,7 @@ export const siteStatsFixture: ApiResponse<SiteStats> = {
 ---
 
 ### PR #12 — About (Stage 4: Completion)
-*(Merge PR #11 → pull `feat/bcsd-portal-scaffold`)*
+*(Merge PR #11 → pull `development`)*
 - **Target File:** `/src/features/about/data/about.ts`
 - **Branch:** `feat/about-complete`
 - **Commit:** `feat(about): finalize complete department leadership roster`
