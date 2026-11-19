@@ -27,7 +27,7 @@ const items: NewsItem[] = [
   },
   {
     id: 3,
-    title: 'Libertad Aquatic Center Maintenace Advisory',
+    title: 'Libertad Aquatic Center Maintenance Advisory',
     category: 'advisory',
     published_at: '2026-11-14',
     excerpt: 'Scheduled filtration maintenance begins this week.',
@@ -36,11 +36,13 @@ const items: NewsItem[] = [
   },
   {
     id: 4,
-    title: 'Coach Spotlight: Building Youth Baskteball Leaders',
+    title: 'Coach Spotlight: Building Youth Basketball Leaders',
     category: 'feature',
-    published_at: '11/13/2026',
+    published_at: '2026-11-13',
     excerpt: 'How barangay clinics are mentoring the next generation of players.',
-    body: ['Draft feature body.'],
+    body: [
+      'Community coaches across Butuan City are turning weekend clinics into mentorship hubs.',
+    ],
     cover: null,
   },
   {
@@ -48,7 +50,7 @@ const items: NewsItem[] = [
     title: 'Inter-Barangay League Semifinals Schedule Released',
     category: 'announcement',
     published_at: '2026-11-12',
-    excerpt: 'Draft excerpt TBD',
+    excerpt: 'Tip-off times and court assignments for the final four barangays.',
     body: ['Draft body TBD.'],
     cover: null,
   },
@@ -57,7 +59,7 @@ const items: NewsItem[] = [
     title: 'Balangay Fun Run Draws Over 2,000 Participants',
     category: 'result',
     published_at: '2026-11-11',
-    excerpt: 'Draft excerpt TBD',
+    excerpt: 'Families, students, and local runners packed Guingona Park for the annual run.',
     body: ['Draft body TBD.'],
     cover: null,
   },
